@@ -84,11 +84,6 @@ myJObfuscator.intsToArrays = true;
 myJObfuscator.dblsToArrays = true;
 
 //
-// strip comments from the parsed source
-//
-myJObfuscator.removeComments = true;
-
-//
 // encrypt doubles using floating-point math rewrites
 //
 myJObfuscator.dblsMathCrypt = true;
@@ -169,7 +164,6 @@ class Ideone
     // annotation alone)
     //
     //@Obfuscate(
-    //  remove_comments = true,
     //  array_int_crypt = true,
     //  array_char_crypt = true,
     //  array_double_crypt = true,

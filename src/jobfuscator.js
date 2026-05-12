@@ -77,9 +77,6 @@ export default class JObfuscator {
   /** @type {boolean} for each method, extract all possible doubles from the code and store them in an array */
   dblsToArrays = true;
 
-  /** @type {boolean} strip comments from the parsed source */
-  removeComments = true;
-
   /** @type {boolean} encrypt doubles using floating-point math rewrites */
   dblsMathCrypt = true;
 
@@ -193,7 +190,7 @@ export default class JObfuscator {
     if (this.cryptStrings) params.crypt_strings = "1";
     if (this.intsToArrays) params.ints_to_arrays = "1";
     if (this.dblsToArrays) params.dbls_to_arrays = "1";
-    if (this.removeComments) params.remove_comments = "1";
+    params.remove_comments = "1";
     if (this.dblsMathCrypt) params.dbls_math_crypt = "1";
     if (this.stringCharVault) params.string_char_vault = "1";
     if (this.intsFromDoubleMath) params.ints_from_double_math = "1";

@@ -69,7 +69,6 @@ class Ideone
     // annotation alone)
     //
     //@Obfuscate(
-    //  remove_comments = true,
     //  array_int_crypt = true,
     //  array_char_crypt = true,
     //  array_double_crypt = true,
