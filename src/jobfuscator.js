@@ -1,7 +1,7 @@
 /******************************************************************************
  * JObfuscator WebApi interface
  *
- * Version        : v1.0.0
+ * Version        : v1.1.0
  * Language       : JavaScript
  * Author         : Bartosz Wójcik
  * Web page       : https://www.pelock.com
@@ -76,6 +76,39 @@ export default class JObfuscator {
 
   /** @type {boolean} for each method, extract all possible doubles from the code and store them in an array */
   dblsToArrays = true;
+
+  /** @type {boolean} strip comments from the parsed source */
+  removeComments = true;
+
+  /** @type {boolean} encrypt doubles using floating-point math rewrites */
+  dblsMathCrypt = true;
+
+  /** @type {boolean} store string character data in vault-style indirection */
+  stringCharVault = true;
+
+  /** @type {boolean} derive integer expressions from double math */
+  intsFromDoubleMath = true;
+
+  /** @type {boolean} inject opaque predicate mixer chains */
+  opaqueMixerChain = true;
+
+  /** @type {boolean} rewrite boolean conditions into harder-to-follow forms */
+  complexifyBooleans = true;
+
+  /** @type {boolean} add try/finally noise around regions of the AST */
+  tryFinallyNoise = true;
+
+  /** @type {boolean} encrypt int array literals */
+  arrayIntCrypt = true;
+
+  /** @type {boolean} encrypt char array literals */
+  arrayCharCrypt = true;
+
+  /** @type {boolean} encrypt double array literals */
+  arrayDoubleCrypt = true;
+
+  /** @type {boolean} encrypt String array literals */
+  arrayStringCrypt = true;
 
   /**
    * Initialize JObfuscator class
@@ -160,6 +193,17 @@ export default class JObfuscator {
     if (this.cryptStrings) params.crypt_strings = "1";
     if (this.intsToArrays) params.ints_to_arrays = "1";
     if (this.dblsToArrays) params.dbls_to_arrays = "1";
+    if (this.removeComments) params.remove_comments = "1";
+    if (this.dblsMathCrypt) params.dbls_math_crypt = "1";
+    if (this.stringCharVault) params.string_char_vault = "1";
+    if (this.intsFromDoubleMath) params.ints_from_double_math = "1";
+    if (this.opaqueMixerChain) params.opaque_mixer_chain = "1";
+    if (this.complexifyBooleans) params.complexify_booleans = "1";
+    if (this.tryFinallyNoise) params.try_finally_noise = "1";
+    if (this.arrayIntCrypt) params.array_int_crypt = "1";
+    if (this.arrayCharCrypt) params.array_char_crypt = "1";
+    if (this.arrayDoubleCrypt) params.array_double_crypt = "1";
+    if (this.arrayStringCrypt) params.array_string_crypt = "1";
 
     //
     // check if compression is enabled

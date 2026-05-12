@@ -3,7 +3,7 @@
  *
  * In this example we will obfuscate sample source with custom options.
  *
- * Version        : v1.0.0
+ * Version        : v1.1.0
  * Language       : JavaScript
  * Author         : Bartosz Wójcik
  * Web page       : https://www.pelock.com
@@ -84,6 +84,49 @@ myJObfuscator.intsToArrays = true;
 myJObfuscator.dblsToArrays = true;
 
 //
+// strip comments from the parsed source
+//
+myJObfuscator.removeComments = true;
+
+//
+// encrypt doubles using floating-point math rewrites
+//
+myJObfuscator.dblsMathCrypt = true;
+
+//
+// store string character data in vault-style indirection
+//
+myJObfuscator.stringCharVault = true;
+
+//
+// derive integer expressions from double math
+//
+myJObfuscator.intsFromDoubleMath = true;
+
+//
+// inject opaque predicate mixer chains
+//
+myJObfuscator.opaqueMixerChain = true;
+
+//
+// rewrite boolean conditions into harder-to-follow forms
+//
+myJObfuscator.complexifyBooleans = true;
+
+//
+// add try/finally noise around regions of the AST
+//
+myJObfuscator.tryFinallyNoise = true;
+
+//
+// encrypt int, char, double, and String array literals
+//
+myJObfuscator.arrayIntCrypt = true;
+myJObfuscator.arrayCharCrypt = true;
+myJObfuscator.arrayDoubleCrypt = true;
+myJObfuscator.arrayStringCrypt = true;
+
+//
 // source code in Java format
 //
 const sourceCode = `import java.util.*;
@@ -126,12 +169,23 @@ class Ideone
     // annotation alone)
     //
     //@Obfuscate(
+    //  remove_comments = true,
+    //  array_int_crypt = true,
+    //  array_char_crypt = true,
+    //  array_double_crypt = true,
+    //  array_string_crypt = true,
     //  ints_math_crypt = true,
+    //  dbls_math_crypt = true,
     //  crypt_strings = true,
+    //  string_char_vault = true,
     //  rename_methods = false,
     //  rename_variables = true,
     //  shuffle_methods = true,
     //  mix_code_flow = true,
+    //  ints_from_double_math = true,
+    //  opaque_mixer_chain = true,
+    //  complexify_booleans = true,
+    //  try_finally_noise = true,
     //  ints_to_arrays = true,
     //  dbls_to_arrays = true
     // )
