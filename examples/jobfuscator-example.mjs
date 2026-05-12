@@ -74,6 +74,11 @@ myJObfuscator.intsMathCrypt = true;
 myJObfuscator.cryptStrings = true;
 
 //
+// split eligible string literals into concatenated fragments
+//
+myJObfuscator.stringSplit = true;
+
+//
 // for each method, extract all possible integers from the code and store them in an array
 //
 myJObfuscator.intsToArrays = true;
@@ -170,6 +175,7 @@ class Ideone
     //  array_string_crypt = true,
     //  ints_math_crypt = true,
     //  dbls_math_crypt = true,
+    //  string_split = true,
     //  crypt_strings = true,
     //  string_char_vault = true,
     //  rename_methods = false,

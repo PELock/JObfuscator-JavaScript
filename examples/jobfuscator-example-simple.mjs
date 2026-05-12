@@ -75,6 +75,7 @@ class Ideone
     //  array_string_crypt = true,
     //  ints_math_crypt = true,
     //  dbls_math_crypt = true,
+    //  string_split = true,
     //  crypt_strings = true,
     //  string_char_vault = true,
     //  rename_methods = false,

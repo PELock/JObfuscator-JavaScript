@@ -71,6 +71,9 @@ export default class JObfuscator {
   /** @type {boolean} encrypt strings using polymorphic encryption algorithms */
   cryptStrings = true;
 
+  /** @type {boolean} split eligible string literals into concatenated fragments */
+  stringSplit = true;
+
   /** @type {boolean} for each method, extract all possible integers from the code and store them in an array */
   intsToArrays = true;
 
@@ -188,6 +191,7 @@ export default class JObfuscator {
     if (this.shuffleMethods) params.shuffle_methods = "1";
     if (this.intsMathCrypt) params.ints_math_crypt = "1";
     if (this.cryptStrings) params.crypt_strings = "1";
+    if (this.stringSplit) params.string_split = "1";
     if (this.intsToArrays) params.ints_to_arrays = "1";
     if (this.dblsToArrays) params.dbls_to_arrays = "1";
     params.remove_comments = "1";
