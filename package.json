@@ -37,7 +37,7 @@
   "homepage": "https://www.pelock.com/products/jobfuscator",
   "repository": {
     "type": "git",
-    "url": "https://github.com/PELock/JObfuscator-JavaScript.git"
+    "url": "git+https://github.com/PELock/JObfuscator-JavaScript.git"
   },
   "bugs": {
     "url": "https://www.pelock.com"
